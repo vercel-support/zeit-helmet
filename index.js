@@ -6,7 +6,7 @@ const app = express();
 app.use(helmet());
 
 app.get("*", (req, res) => {
-  res.status(200).send(`<!DOCTYPE html>
+  res.status(200).append('Content-Type', 'text/html').send(`<!DOCTYPE html>
     <html prefix="og: http://ogp.me/ns#">
       <head></head>
       <body>
